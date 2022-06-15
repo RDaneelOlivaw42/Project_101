@@ -4,7 +4,7 @@ import os
 class TransferData ():
 
     def __init__( self, access_token ):
-        self.access_token: access_token
+        self.access_token = access_token
 
     def upload_file(self, file_from, file_to):
         dbx = dropbox.Dropbox(self.access_token)
@@ -23,11 +23,5 @@ def main():
 
     transfer_data.upload_file(file_from, file_to)
     print("File has been uploaded")
-
-    for (root, dirs, files) in os.walk('/Users/drpoojayadav/Downloads/untitled folder/luftballoons/nadia/Alan', topdown = True):
-        print(root)
-        print(dirs)
-        print(files)
-
 
 main()
